@@ -3,6 +3,7 @@ import React from 'react';
 import './App.css';
 
 import Header from './Components/Header';
+import TransformerSection from './Containers/TransformersSection'
 
 export default class App extends React.Component {
   state = {
@@ -24,11 +25,17 @@ export default class App extends React.Component {
       }
     ]
   }
+  function handleHeaderClick() {
+    console.log("I got clicked")
+  }
 
   render() {
+
     return (
       <div className="App">
-        <Header />
+        <Header data={this.state.proptimusLogo}/>
+        <TransformerSection data= {this.state.proptimusii} />
+        
       </div>
     );
   }

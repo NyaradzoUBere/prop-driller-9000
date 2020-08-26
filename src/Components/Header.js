@@ -1,12 +1,12 @@
 import React from 'react';
 
-function Header() {
-
+function Header(props) {
   return (
     <header>
       <img
-        src = ""
+        src = {props.data}
         alt = "logo"
+        onClick= {props.handleHeaderClick}
       />
     </header>
   );
